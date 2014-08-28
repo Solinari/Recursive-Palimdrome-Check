@@ -8,17 +8,13 @@ def Palimdromerie(pali):
         
         print("Found a palimdrome!\n")
         return
-    
-    first = pali[:1]
-    last = pali[-1:]
-    rest = pali[1:-1]
 
-    if first == last:
-        print("'{}' == '{}' ...\n".format(first, last))
-        Palimdromerie(rest)
+    if pali[:1] == pali[-1:]:
+        print("'{}' == '{}' ...\n".format(pali[:1], pali[-1:]))
+        Palimdromerie(pali[1:-1])
 
-    if first != last:
-        print("{} =/= {} !\n".format(first, last))
+    if pali[:1] != pali[-1:]:
+        print("{} =/= {} !\n".format(pali[:1], pali[-1:]))
         print("Not a palimdrome.\n")
         return
         
